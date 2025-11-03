@@ -1,0 +1,2083 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  /* border: 1px solid red !important; */
+}
+
+[class*='title'] {
+  font-family: serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+:not(.btn-check) + .btn:active {
+  color: unset;
+  background-color: unset;
+  border-color: unset;
+}
+
+.nav-bar {
+  background-color: #fafafa;
+  border-bottom: 1px solid #dfdfdf;
+  font-size: 13px;
+  z-index: 1000;
+}
+
+.nav-bar__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 23px;
+}
+
+/* nav-bar ngoai */
+.nav-bar__left,
+.nav-bar__right {
+  padding-left: 10px;
+}
+
+.nav-bar__center {
+  display: flex;
+  align-items: center;
+}
+
+/* nav-bar right */
+.nav-bar__editions-toggle {
+  font-size: 12px;
+}
+
+/* nav-bar center */
+.nav-bar__center a.nav-bar__link {
+  font-weight: 550;
+}
+
+.nav-bar__item--full-width {
+  position: static;
+  padding: 15px 14px 15px 0;
+}
+
+/* nav-bar right */
+.login-template-btn {
+  width: 80px;
+  font-size: 11px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.btn-outline-dark {
+  background-color: white;
+}
+
+.nav-bar__right #signup-btn {
+  width: max-content;
+}
+
+/* sidebar */
+
+.sidebar-nav.offcanvas-start {
+  width: 300px;
+  max-width: 90%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+}
+
+.sidebar-nav__header {
+  padding: 1rem 1.5rem;
+}
+
+.sidebar-nav__close-button {
+  margin-right: 1rem;
+}
+
+/* .sidebar-nav__logo img {
+  height: 21px;
+  width: 180px;
+} */
+
+/* Search form trong sidebar */
+.sidebar-nav__search-form {
+  position: relative;
+  margin: 0.75rem 1.5rem;
+}
+
+.sidebar-nav__search-input {
+  display: block;
+  width: 100%;
+  height: 44px;
+  border-radius: 4px;
+  border: 1px solid #cfcfcf;
+  padding: 0.75rem 42px 0.75rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.sidebar-nav__search-input:focus {
+  border: 1px solid #0085e7;
+  outline: none;
+}
+
+.sidebar-nav__search-submit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0 0.75rem;
+}
+
+.sidebar-nav__search-divider {
+  height: 24px;
+  border-left: 1px solid #dfdfdf;
+  margin-right: 0.5rem;
+}
+
+.sidebar-nav__list.offcanvas-body {
+  font-family: sans-serif;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  scrollbar-width: none;
+  overflow-y: auto;
+}
+
+.sidebar-nav__link {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 1.5rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #2f2f2f;
+  text-decoration: none;
+}
+
+.sidebar-nav__group {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 1.5rem;
+  font-weight: bold;
+  color: #2f2f2f;
+}
+
+.sidebar-nav__group-title {
+  font-family: sans-serif;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.9rem;
+}
+
+.sidebar-nav__toggle {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+}
+
+.sidebar-nav__divider {
+  border: none;
+  border-top: 1px solid #b5b5b5;
+  margin: 0.75rem 1.5rem;
+}
+
+.sidebar-nav__footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav__footer-item {
+  height: 34px;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+.sidebar-nav__footer-item:hover {
+  background-color: #f4f4f4;
+}
+
+.sidebar-nav__footer-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #2f2f2f;
+  text-decoration: none;
+}
+
+/* Submenu trong sidebar */
+.sidebar-nav__item--has-submenu {
+  position: relative;
+}
+
+.sidebar-nav__item--has-submenu:hover {
+  background-color: #fff;
+}
+
+.sidebar-nav__item--has-submenu:hover > .sidebar-nav__group {
+  background-color: #f4f4f4;
+}
+
+.sidebar-nav__submenu {
+  position: fixed;
+  width: 220px;
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1100;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+
+  transform: translateX(300px);
+}
+
+.sidebar-nav__item--has-submenu:hover > .sidebar-nav__submenu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sidebar-nav__submenu-link {
+  display: block;
+  padding: 0.5rem 1.5rem;
+  color: #2f2f2f;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.sidebar-nav__submenu-link:last-child {
+  border-bottom: none;
+}
+
+.sidebar-nav__submenu-link:hover {
+  background-color: #f4f4f4;
+}
+
+.sidebar-nav__item--has-submenu .sidebar-nav__toggle i {
+  color: #555;
+}
+
+/* Search */
+.search-overlay {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 40px;
+  left: 0;
+  right: 0;
+}
+
+.search-overlay--visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.search-overlay__container {
+  display: flex;
+  padding: 2rem;
+  gap: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-overlay__close-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.search-overlay__title {
+  color: #121212;
+  font-weight: 400;
+}
+
+.search-overlay__form {
+  max-width: 860px;
+}
+
+.search-overlay__input-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+}
+
+.search-overlay__divider {
+  margin: -0.5rem 0.75rem;
+}
+
+.search-overlay__submit-button {
+  padding: 0.5rem;
+}
+
+.search-overlay__submit-button i {
+  font-size: 1.25rem;
+  color: #111;
+}
+
+/* Editions */
+.nav-bar__editions-toggle i {
+  font-size: 8px;
+  margin-left: 0.25em;
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-bar__editions-menu {
+  min-width: 100px;
+  width: 145px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-bar__editions-menu a {
+  padding: 4px 16px;
+  font-size: .75rem;
+}
+
+.nav-bar__editions-menu a:hover {
+  font-weight: bolder;
+  background-color: #e8e8e8;
+}
+
+.nav-bar__editions-divider {
+  width: 100px;
+  margin: 0 auto;
+  height: 1px;
+}
+/* -- Main Dropdown Container -- */
+.nav-bar__dropdown {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s;
+  padding: 35px 20px;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+}
+
+.nav-bar__item:hover .nav-bar__dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* -- Content Wrapper inside Dropdown -- */
+.nav-bar__dropdown-content {
+  gap: 40px;
+}
+
+.nav-bar__dropdown-left {
+  max-width: 250px;
+}
+
+.nav-bar__dropdown-heading {
+  font-family: 'EB Garamond';
+  font-size: 26px;
+  margin-bottom: 12px;
+  font-weight: 300 !important;
+  color: rgb(47, 47, 47);
+}
+
+.nav-bar__dropdown-description {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* -- Sections -- */
+.nav-bar__dropdown-right {
+  max-width: 270px;
+}
+
+.nav-bar__dropdown-title {
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.nav-bar__dropdown-list {
+  columns: 2;
+}
+
+.nav-bar__dropdown-list li {
+  padding: 1rem 0;
+}
+
+.nav-bar__dropdown-list a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s ease-in-out;
+}
+
+.nav-bar__dropdown-list a:hover {
+  border-bottom: 1px solid black;
+}
+
+/* -- Newsletters -- */
+.nav-bar__dropdown-newsletters {
+  padding-left: 24px;
+}
+
+.newsletter-item {
+  gap: 12px;
+  padding: 8px 4px;
+  transition: background-color 0.2s ease;
+}
+
+.newsletter-item:hover {
+  background-color: #f6f6f6;
+}
+
+.newsletter-item__image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.newsletter-item__title {
+  font-size: 15px;
+}
+
+.newsletter-item__description {
+  font-size: 12px;
+  color: #333;
+  line-height: 1.5;
+  height: 36px;
+  overflow: hidden;
+}
+
+.newsletter-see-all a {
+  font-size: 14px;
+  padding-bottom: 2px;
+}
+
+/* -- Menu Games -- */
+.nav-bar__dropdown-list--games li {
+  gap: 12px;
+  padding: 1rem 0;
+}
+
+.nav-bar__game-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.nav-bar__dropdown-list--games a {
+  border-bottom: 1px solid transparent;
+}
+
+.nav-bar__dropdown-list--games a:hover {
+  border-bottom: 1px solid black;
+}
+
+/* Chung */
+.home-main {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+/* *** Header  */
+.header {
+  margin-top: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.header__left .header__date,
+.header__right .header__membership {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.header .header__center img {
+  width: 402px;
+}
+
+.header__right .header__donate {
+  text-align: end;
+}
+
+/* --- Các lớp layout chính --- */
+.page.home-main {
+  padding-top: 1.5rem;
+}
+
+.content {
+  width: 70%;
+}
+
+.page__divider {
+  width: 1px;
+  background-color: rgb(181 181 181 / var(--tw-bg-opacity, 1));
+  margin: 0 auto;
+}
+
+.border-dashed {
+  border-top: 1px dashed #d1d5db;
+}
+
+.article-tag {
+  background-color: #1f2937;
+  width: max-content;
+  color: white;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0 0.25rem;
+  border-radius: 2px;
+  line-height: 1.8;
+  letter-spacing: 0.2px;
+}
+
+/* --- STORY-CARD --- */
+.story-card {
+  grid-template-columns: 2fr 3fr;
+  column-gap: 1.5rem;
+}
+
+.story-card .story-card__meta-item {
+  gap: 0.25rem;
+  padding-right: 1rem;
+  font-size: 12px;
+}
+
+.story-card .story-card__media {
+  grid-row: span 2;
+}
+
+.story-card .story-card__media img.story-card__image {
+  aspect-ratio: 3 / 2;
+}
+
+.story-card__excerpt {
+  font-size: 0.875rem;
+}
+
+.secondary-story-card__content .story-card__title {
+  padding-top: 1rem;
+}
+
+.content__divider {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+  border: 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.content__divider_bold {
+  margin-top: 1.25rem;
+  margin-bottom: 1.75rem;
+  border: 0;
+  border-top: 1px solid black;
+}
+
+/* --- STORIES-SECTION --- */
+.stories-section .stories-section__divider {
+  border: 0;
+  border-top: 1px solid black;
+}
+
+.stories-section .featured-story__image,
+.stories-section .story-card-mini .story-card__image {
+  aspect-ratio: 3 / 2;
+}
+
+.stories-section a.story-card__link,
+.stories-section a.featured-story__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Giữ lại style cho icon */
+.stories-section i.fa-regular {
+  font-size: 11px;
+}
+
+.stories-section .meta-item__icon {
+  stroke-width: 2;
+}
+
+/* --- Story Grid (bên trong stories-section) --- */
+.border-end-dashed {
+  border-right: 1px dashed #d1d5db;
+}
+
+.premium-section .content__divider {
+  border: none;
+  border-top: 1px solid black;
+}
+
+.premium-section .premium-section__divider {
+  border: none;
+  border-top: 1px solid #555;
+  margin-bottom: 0.5rem;
+}
+
+.premium-section__title-link {
+  font-family: sans-serif;
+}
+
+.premium-section .featured-article__image {
+  aspect-ratio: 3 / 2;
+}
+
+.premium-section .featured-article__meta {
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.premium-section .featured-article__meta .meta-item {
+  color: #555;
+}
+
+.premium-section .featured-article__meta .meta-item i {
+  font-size: 0.7rem;
+}
+
+.premium-section .in-depth-carousel__track {
+  transition: transform 0.5s ease-in-out;
+}
+
+.premium-section .article-card--horizontal {
+  flex: 0 0 100%;
+  min-width: 0;
+  position: relative;
+}
+
+.premium-section .article-card--horizontal:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -0.75rem;
+  top: 0;
+  height: 100%;
+}
+
+.premium-section .article-card__image-link {
+  width: 45%;
+}
+
+.premium-section .article-card__image {
+  aspect-ratio: 3 / 2; /* Giữ lại */
+}
+
+.premium-section .article-card__tag {
+  background-color: #1f2937;
+  color: white;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0.1rem 0.25rem;
+  border-radius: 2px;
+}
+
+.premium-section .article-card__meta {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.premium-section .carousel-button {
+  border: 1px solid #2f2f2f;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  cursor: pointer;
+  color: #333;
+}
+
+.premium-section .carousel-button:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.premium-section .article-card--horizontal {
+  flex-basis: calc(50% - 0.75rem);
+}
+
+/* --- SECTION: EPOCH TV --- */
+.epoch-tv-section {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.epoch-tv-section__header {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.epoch-tv-section__divider {
+  border: none;
+  height: 1px;
+  background-color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.epoch-tv-section__title-link {
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #111;
+  text-decoration: none;
+}
+
+.epoch-tv-section .content__divider {
+  border: none;
+  border-top: 1px solid black;
+  margin: 1.5rem 0;
+}
+
+/* --- MEDIA BLOCK --- */
+
+.media-block__content {
+  gap: 0.75rem;
+}
+
+.media-block__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.media-block__link {
+  text-decoration: none;
+  color: #111;
+}
+
+.media-block__excerpt {
+  font-size: 0.875rem;
+  color: #374151;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.media-block__meta {
+  margin-top: auto;
+}
+
+.media-block__duration {
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.media-block__play-button {
+  font-size: 1.8rem;
+  color: #111;
+}
+
+.media-block__media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* --- VIDEO CARD --- */
+.video-card {
+  gap: 0.75rem;
+}
+
+.epoch-tv-section .article-carousel .video-card {
+  flex-basis: calc(100% / 3);
+  border-right: 1px dashed #d1d5db;
+  padding-right: 1.5rem;
+}
+
+.epoch-tv-section .article-carousel .video-card:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.video-card__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.video-card__content {
+  gap: 0.75rem;
+}
+
+.video-card__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.video-card__title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.video-card__link {
+  text-decoration: none;
+  color: #111;
+}
+
+/* --- CAROUSEL (bên trong epoch-tv-section) --- */
+
+.epoch-tv-section .article-carousel__track {
+  gap: 1.5rem;
+  scrollbar-width: none;
+}
+
+.epoch-tv-section .article-carousel__track::-webkit-scrollbar {
+  display: none;
+}
+
+.epoch-tv-section .article-carousel .video-card {
+  flex: 0 0 80%;
+}
+
+/* --- Responsive --- */
+
+.epoch-tv-section .article-carousel__navigation {
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.epoch-tv-section .article-carousel .video-card {
+  flex-basis: calc(100% / 3 - 1rem);
+}
+
+/* --- TIP BANNER --- */
+.tip-banner {
+  margin: 0.5rem auto;
+  margin-top: 3rem;
+  padding: 2rem 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* --- SECTION: CHINA --- */
+.china-section {
+  margin-bottom: 1.5rem;
+}
+
+.china-section__header {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.china-section__divider {
+  height: 1px;
+  background-color: #565656;
+  margin-bottom: 0.5rem;
+}
+
+.china-section__title-link {
+  font-family: sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #111;
+}
+
+.china-section .content__divider {
+  border-top: 1px dashed black;
+}
+
+.china-section .article-carousel__track {
+  /* gap: 1rem; */
+  margin-top: 20px;
+}
+
+/* --- featured-stor` --- */
+.china-section .featured-story {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.china-section .featured-story__content {
+  gap: 0.75rem;
+}
+
+.china-section .featured-story__image {
+  aspect-ratio: 3 / 2;
+}
+
+.featured-story__image-container {
+  grid-row: span 2;
+}
+
+.china-section .featured-story__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.china-section .featured-story__secondary-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.china-section .featured-story__excerpt {
+  font-size: 0.875rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.china-section .article-meta {
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 0.7rem;
+}
+
+.china-section .article-meta .meta-item {
+  gap: 0.25rem;
+  color: #757575;
+}
+
+.china-section .article-meta .meta-item i {
+  font-size: 0.7rem;
+}
+
+.china-section .article-carousel .article-card {
+  flex-basis: calc(100% / 3 - 1rem);
+      margin-right: 1rem;
+}
+
+.china-section .article-card__content {
+  margin-top: 0.5rem;
+}
+
+.china-section .article-card:first-child {
+  padding-left: 0;
+}
+
+.china-section .article-card:last-child {
+  padding-right: 10px;
+}
+
+.china-section .article-card:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px dashed #d1d5db;
+}
+
+.china-section .article-card__meta {
+  gap: 1rem;
+}
+
+.china-section .article-card__meta .meta-item {
+  gap: 0.25rem;
+}
+
+/* *** ASIDE */
+aside.page__sidebar {
+  width: 27.25%;
+}
+/* --- CSS BẠN GIỮ LẠI (Nội dung bên trong slide) --- */
+.slide-content__media {
+  margin-bottom: 12px;
+}
+
+.media-placeholder {
+  width: 100%;
+  height: 100%; 
+  background-color: #000;
+  border-radius: 4px;
+}
+
+.slide-content__title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 0 4px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Số dòng tối đa */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #212529;
+  text-decoration: none;
+}
+
+.slide-content__title:hover {
+  text-decoration: underline;
+}
+
+.slide-content__description {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Carousel */
+.carousel-control-prev,
+.carousel-control-next {
+  position: static; 
+  width: 20px;   
+  height: 20px;    
+  opacity: 1;   
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+  font-size: 12px;
+  color: #555;    
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  display: none;
+}
+
+.carousel-control-prev:disabled i,
+.carousel-control-next:disabled i {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.carousel-indicators {
+  position: static;
+  margin: 0 16px;    
+  padding-top: 5px; 
+  gap: 13px;        
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 8px;          
+  height: 8px;        
+  border-radius: 50%;  
+  background-color: #ccc;
+  opacity: 1;           
+  border: none;         
+  margin: 0;           
+  padding: 0;
+}
+
+.carousel-indicators .active {
+  background-color: #333; 
+}
+
+.carousel-item {
+  min-height: 16rem;
+}
+
+/* -- LATEST NEWS -- */
+.latest-news {
+  gap: 1rem;
+}
+
+.latest-news__header {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.latest-news__divider {
+  border: 0;
+  height: 1px;
+  background-color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.latest-news__title-container {
+  line-height: 1.5;
+}
+
+.latest-news__read-more-link-desktop {
+  font-size: 14px;
+}
+
+.latest-news__read-more-link-desktop svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.latest-news__read-more-link-mobile {
+  font-size: 14px;
+}
+
+/* Thêm style cho SVG của link mobile */
+.latest-news__read-more-link-mobile svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.latest-news__title-link {
+  font-size: 0.89rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #111;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* -- Latest news -- */
+.latest-news__item {
+  padding: 1rem 0;
+  border-top: 1px dashed #d1d5db;
+}
+
+.latest-news__item:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.latest-news__timestamp {
+  font-size: 0.85rem;
+  color: #d7360e !important;
+  white-space: nowrap;
+}
+
+.latest-news__icon {
+  width: 18px;
+  height: 18px;
+}
+
+.latest-news__headline {
+  font-size: 1rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 550;
+  color: #111;
+  line-height: 1.4;
+  margin-top: 0.25rem;
+}
+
+/* --- WELLNESS --- */
+
+.wellness-section {
+  gap: 1rem;
+}
+
+.page__sidebar .wellness-section__header {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  padding-top: 10px;
+}
+
+.wellness-section__title-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #111;
+}
+
+/* -- Thẻ bài viết nổi bật -- */
+.featured-card {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px dashed #d1d5db;
+}
+
+.featured-card:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.featured-card__image-link {
+  margin-bottom: 1rem;
+}
+
+.featured-card__image {
+  aspect-ratio: 3 / 2;
+}
+
+.featured-card__content {
+  gap: 0.75rem;
+}
+
+.featured-card__title {
+  font-size: 1.2rem;
+  font-weight: 300 !important;
+  color: #111;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.featured-card__excerpt {
+  font-size: 0.875rem;
+  color: #374151;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.featured-card .article-meta a {
+  font-size: 0.7rem;
+  color: #595959;
+  padding-right: 1rem;
+}
+
+.featured-card .article-meta a svg {
+  width: 14px;
+  margin-right: 0.25rem;
+}
+
+.featured-card .article-meta i {
+  padding-right: 1.25rem;
+}
+
+/* ---  FEATURED PODCAST --- */
+.featured-podcast {
+  gap: 1rem;
+}
+
+.featured-podcast__header {
+  margin-top: 3.5rem;
+}
+
+.featured-podcast__divider {
+  border: 0;
+  height: 1px;
+  background-color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.featured-podcast__title-link {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #111;
+}
+
+.featured-podcast__more-link-desktop {
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.featured-podcast__more-link-desktop svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.featured-podcast__more-link-mobile {
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  color: #333;
+}
+
+/* Thêm style cho SVG của link mobile */
+.featured-podcast__more-link-mobile svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* -- Thẻ Podcast -- */
+.featured-podcast__card {
+  gap: 0.75rem;
+}
+
+.featured-podcast__image {
+  aspect-ratio: 1 / 1;
+}
+
+.featured-podcast__label,
+.featured-podcast__label a {
+  font-size: 0.75rem;
+  color: #4b5563;
+}
+
+.featured-podcast__title {
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: #1f2937;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.featured-podcast__audio-info {
+  font-size: 0.8rem;
+  color: #4b5563;
+}
+
+.featured-podcast__audio-button {
+  color: #4b5563;
+  text-decoration: none;
+  margin-right: 0.5rem; /* Thêm khoảng cách */
+}
+
+/* --- AUTHOR ARTICLES --- */
+
+.author-articles {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.author-articles__top-divider {
+  height: 1px;
+  background-color: #555555;
+}
+
+.author-articles__container {
+  border: 1px dashed #d1d5db;
+  padding: 1rem;
+}
+
+.author-articles__header {
+  color: #1f2937;
+}
+
+.author-articles__title,
+.author-articles__author-name {
+  font-size: 1.125rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+}
+
+.author-articles__divider {
+  height: 1px;
+  background-color: #666666;
+}
+
+.author-articles__list {
+  gap: 2px;
+}
+
+.author-articles__item {
+  background-color: #eeebff;
+  padding: 0.75rem;
+}
+
+.author-articles__headline {
+  font-size: 1.125rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.author-articles__headline--light {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.author-articles__date {
+  font-size: 0.75rem;
+  color: #4b5563;
+}
+
+.author-articles__more-link {
+  padding: 0.25rem 0;
+  font-size: 0.75rem;
+  color: #1f2937;
+}
+/* --- OPINION --- */
+.opinion-section {
+  gap: 2rem;
+}
+
+.opinion-section__header {
+  margin-top: 1rem;
+}
+
+.opinion-section__divider {
+  height: 1px;
+  background-color: #2f2f2f;
+  margin-bottom: 0.5rem;
+}
+
+.opinion-section__title-link {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: #111;
+}
+
+.author-post {
+  gap: 0.75rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px dashed #d1d5db;
+}
+
+.author-post:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.author-post__avatar-image {
+  width: 48px;
+  height: 48px;
+}
+
+.author-post__content {
+  gap: 0.25rem;
+}
+
+.author-post__author,
+.author-post__author a {
+  font-size: 0.875rem;
+  color: #555;
+  margin: 0;
+}
+
+.author-post__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+.author-post__date {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* --- LIFESTYLE SECTION --- */
+
+.lifestyle-section {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.lifestyle-section__header {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.lifestyle-section__divider {
+  height: 1px;
+  background-color: #2f2f2f;
+  margin-bottom: 0.5rem;
+}
+
+.lifestyle-section__title-link {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: #111;
+}
+
+.lifestyle-card {
+  gap: 0.5rem;
+}
+
+.lifestyle-card__image {
+  aspect-ratio: 3 / 2;
+}
+
+.lifestyle-card__author {
+  font-size: 0.8rem;
+  color: #707070;
+}
+
+.lifestyle-card__author-link {
+  color: inherit;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.lifestyle-card__title {
+  font-size: 1.125rem;
+  color: #1f2937;
+  line-height: 1.4;
+}
+
+.lifestyle-section__footer-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 1.5rem;
+}
+
+.lifestyle-section__footer-link i {
+  font-size: 0.75rem;
+}
+
+/* --- MOST READ SECTION --- */
+.most-read {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.most-read__header {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.most-read__divider {
+  height: 1px;
+  background-color: #2f2f2f;
+  margin-bottom: 0.5rem;
+}
+
+.most-read__item-divider {
+  border-top: 1px dashed #d1d5db;
+}
+
+.most-read__title {
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.post-item {
+  gap: 0.5rem;
+}
+
+.post-item__author {
+  font-size: 0.75rem;
+  color: #374151;
+}
+
+.post-item__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #111;
+}
+
+/* --- Carousel con bên trong MOST READ --- */
+.most-read__item-divider_carousel {
+  border-top: 1px solid #797c7f;
+  margin-bottom: 10px;
+}
+
+.most-read .article-carousel {
+  padding-top: 1rem;
+}
+
+.most-read .article-carousel__track {
+  gap: 1rem;
+}
+
+.most-read .article-carousel .article-card {
+  flex: 0 0 calc(50% - 0.5rem);
+  min-width: 0;
+  padding-right: 0.75rem;
+  border-right: 1px dashed #d1d5db;
+}
+
+.most-read .article-carousel .article-card:last-child {
+  border-right: none;
+}
+
+.most-read .article-carousel .article-card__title {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.most-read .article-carousel__navigation {
+  gap: 14px;
+  margin-top: 1rem;
+}
+
+/* *** BLOCK GROUP */
+.block-group {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* *** FOOD */
+.food-section,
+.wellness-section,
+.games-section {
+  margin-top: 1.5rem;
+}
+
+.food-section__header {
+  margin-bottom: 1rem;
+  border-top: 2px solid #2f2f2f;
+}
+
+.wellness-section__header,
+.games-section__header {
+  margin-bottom: 1rem;
+  border-top: 1px solid #565656;
+}
+
+.food-section__header,
+.wellness-section__header,
+.games-section__header {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #111;
+  text-decoration: none;
+}
+
+.food-section__title-link,
+.wellness-section__title-link,
+.games-section__title-link {
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #111;
+}
+
+/* --  Article Card -- */
+.article-card {
+  width: calc((100% - 3 * 1.25rem) / 4);
+  border-right: 1px dashed #d1d5db;
+  padding-right: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.article-card img {
+  height: 190px;
+}
+
+.article-card__content {
+  gap: 0.5rem;
+  margin-top: 12px;
+}
+
+.article-card__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111;
+  line-height: 1.4;
+}
+
+.article-card__meta {
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  color: #555;
+}
+
+.featured-story__meta {
+  font-size: 0.75rem;
+}
+
+.featured-story__meta .meta-item {
+  color: #757575;
+}
+
+/* -- Nút điều hướng   -- */
+.article-carousel__navigation {
+  margin-top: 1rem;
+}
+
+.carousel-button {
+  background-color: transparent;
+  border: 1px solid #565656;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.carousel-button:hover {
+  background-color: #f0f0f0;
+  border-color: #aaa;
+}
+
+.carousel-button:disabled {
+  background-color: transparent;
+}
+
+/* --- PODCASTS --- */
+
+.podcasts-section {
+  margin-top: 1.5rem;
+}
+
+.podcast-border-dashed {
+  padding-right: 1rem;
+}
+
+.podcasts-section__header {
+  margin-bottom: 1rem;
+  border-top: 1px solid #565656;
+}
+
+.podcasts-section__title-link {
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #111;
+}
+
+.podcast-card {
+  gap: 1.25rem;
+  width: calc(28%);
+  min-width: 300px;
+  padding: 0.5rem 1rem;
+  border-right: 1px dashed #d1d5db;
+}
+
+.podcast-card:first-child {
+  padding-left: 0;
+}
+
+.podcast-card__content {
+  gap: 0.6rem;
+}
+
+.podcast-card__author,
+.podcast-card__date {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.podcast-card__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.2;
+  height: 54px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.podcast-card__artwork {
+  width: 90px;
+  height: 90px;
+  aspect-ratio: 1 / 1;
+}
+
+.podcast-carousel__navigation {
+  margin-top: 1rem;
+}
+
+/* --- CATEGORY cuối trang --- */
+
+.category-grid {
+  color: #333;
+  margin-bottom: 4rem;
+}
+
+.category-first {
+  margin-top: 140px;
+}
+
+.category-column {
+  position: relative;
+  padding: 0 1rem;
+}
+
+.category-column:first-child {
+  padding-left: 0;
+}
+
+.category-column:last-child {
+  padding-right: 0;
+}
+
+.category-column:not(:last-child) {
+  border-right: 1px dashed #d1d5db;
+}
+
+.category-column__header {
+  margin-bottom: 1.5rem;
+}
+
+.category-column__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  font-family: sans-serif;
+}
+
+.category-column__title-accent {
+  width: 55px;
+  height: 4px;
+  background-color: black;
+  margin-top: 0.5rem;
+}
+
+/* -- Bài Viết Nổi Bật -- */
+.category-grid .featured-post {
+  margin-bottom: 1rem;
+  border-bottom: 1px dashed #d1d5db;
+  height: 22rem;
+}
+
+.category-grid-4 .featured-post {
+  margin-bottom: 1rem;
+  border-bottom: 1px dashed #d1d5db;
+  height: 18rem;
+}
+
+.category-grid .featured-post__image {
+  max-width: 377px;
+  aspect-ratio: 3 / 2;
+  margin-bottom: 0.5rem;
+}
+
+.category-grid-4 .featured-post__image {
+  max-width: 275px; /* <-- Giữ lại (style tùy chỉnh cho .category-grid-4) */
+  aspect-ratio: 3 / 2;
+  margin-bottom: 0.75rem;
+}
+
+.featured-post__title {
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+/* -- Danh sách bài viết phụ -- */
+
+.category-grid .post-list__item {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px dashed #d1d5db;
+  height: 5rem;
+}
+
+.category-grid-4 .post-list__item {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px dashed #d1d5db;
+  height: 5rem;
+}
+
+.post-list__link {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* -- Link xem thêm -- */
+.read-more-link {
+  font-weight: 550;
+  margin-top: 1rem;
+}
+
+.read-more-link svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* CSS CHO LƯỚI 4 CỘT */
+.category-grid-4 {
+  color: #333;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.category-grid-4 .category-column {
+  position: relative;
+  padding: 0 1rem;
+}
+
+.category-grid-4 .category-column:first-child {
+  padding-left: 0;
+}
+
+.category-grid-4 .category-column:last-child {
+  padding-right: 0;
+}
+
+.category-grid-4 .category-column:not(:last-child) {
+  border-right: 1px dashed #d1d5db;
+}
+
+.font-light {
+  font-family: EB Garamond, Times, serif;
+}
+
+.category-grid-4 .featured-post__link,
+.category-grid-4 .post-list__link {
+  min-height: 5rem;
+}
+
+.featured-post__excerpt {
+  font-size: 0.875rem;
+  color: #374151;
+  line-height: 1.5;
+  margin: 0.5rem 0;
+}
+
+.featured-story__meta {
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  gap: .5rem;
+}
+
+.featured-story__meta .meta-item {
+  color: #757575;
+}
+
+.featured-story__meta .meta-item i {
+  font-size: 0.7rem;
+}
+
+/* --- SITE FOOTER --- */
+.site-footer {
+  padding-top: 5rem;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+.site-footer a {
+  color: inherit;
+  font-size: 1rem;
+}
+
+.site-footer__container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* -- Header -- */
+.site-footer__header {
+  padding: 1rem 0;
+}
+
+.site-footer .site-footer__action-button {
+  font-size: 1rem;
+  background-color: white;
+}
+
+.site-footer .site-footer__action-button svg {
+  margin-right: 3px;
+}
+
+.site-footer__logo img {
+  height: 25px;
+}
+
+.site-footer__action-button {
+  height: 32px;
+  padding: 0 1rem;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* -- Main Navigation -- */
+.site-footer__main-nav {
+  padding: 12px 0;
+  border-top: 2px solid #e5e5e5;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.site-footer__main-nav-item {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* -- Main Content -- */
+.site-footer__main-content {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* -- Các cột chính -- */
+
+/* -- Nội dung cột Trái -- */
+.subscribe-box {
+  padding: 1rem 0;
+}
+
+.subscribe-box img {
+  width: 360px;
+}
+
+.site-footer__info-links {
+  font-size: 14px;
+}
+
+.site-footer__donation-button {
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 6px 24px;
+  margin: 2rem 0 3rem 0;
+  width: 171px;
+  height: 36px;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  background-color: white;
+}
+
+.site-footer__app-download {
+  margin: 3rem 0;
+}
+
+.site-footer__heading {
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.site-footer__language-list {
+  font-size: 14px;
+}
+
+.site-footer__app-buttons img {
+  height: 52px;
+  width: auto;
+}
+
+/* -- Nội dung cột Giữa & Phải -- */
+
+.category-group__title {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.category-group__link {
+  font-size: 14px;
+}
+
+/* Lưới 4 cột cho các chuyên mục bên trong cột phải */
+.site-footer__right-panel {
+  padding-left: 1rem;
+}
+
+.simple-footer {
+  background-color: #f5f5f5;
+  padding: 2.5rem 1rem;
+}
+
+.simple-footer__copyright {
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.simple-footer__cookie-button {
+  cursor: pointer;
+  font-size: 0.875rem;
+  text-decoration: underline;
+  color: #333;
+}
